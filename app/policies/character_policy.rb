@@ -4,4 +4,12 @@ class CharacterPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def show?
+    true
+  end
+
+  def update?
+    user.present?
+  end
 end
