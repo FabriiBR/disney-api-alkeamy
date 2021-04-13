@@ -1,13 +1,13 @@
-Alkemy Challenge Ruby
+ # Alkemy Challenge Ruby
 
-`Gemas Utilizadas
+### Gemas Utilizadas
 - Pundit ( Authorization )
 - Device ( Login Sign in Sign up)
 - Jbuilder( Views JSON )
 - PG ( PostgreSQL )
 - Simple Token Authentication
 
-`Rutas
+### Rutas
 - Create
 - Index
 - Show
@@ -15,11 +15,15 @@ Alkemy Challenge Ruby
 - Update
 - Search
 
-`Validaciones
+### Validaciones
 - Film 
+    ```
     validates :title, uniqueness: { case_sensitive: true}
     validates :title, :genre, :directed_by, presence: true
     validates :rating, inclusion: { in: %w(1 2 3 4 5)}
+    ```
 - Character
+    ```
     validates :name, uniqueness: true
     validates :name, :age, :history, presence: true
+    ```
