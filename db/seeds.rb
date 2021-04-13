@@ -14,9 +14,9 @@ rapun.save!
 jasmi.save!
 
 #Seed Films
-film1 = Film.find_or_initialize_by(title: 'Mulan', release_date: '1998', directed_by: 'Tony Bancroft & Barry Cook', rating: '86/100', genre:'Animation')
-film2 = Film.find_or_initialize_by(title: 'Enredados', release_date: '2010', directed_by: 'Glen Keane', rating: '89/100', genre: 'Animation')
-film3 = Film.find_or_initialize_by(title: 'Aladdin', release_date: '1992', directed_by: 'Ron Clements & John Msuker', rating: '95/100', genre: 'Animation')
+film1 = Film.find_or_initialize_by(title: 'Mulan', release_date: '1998', directed_by: 'Tony Bancroft & Barry Cook', rating: '4', genre:'Animation')
+film2 = Film.find_or_initialize_by(title: 'Enredados', release_date: '2010', directed_by: 'Glen Keane', rating: '4', genre: 'Animation')
+film3 = Film.find_or_initialize_by(title: 'Aladdin', release_date: '1992', directed_by: 'Ron Clements & John Msuker', rating: '5', genre: 'Animation')
 
 film1.save!
 film2.save!
