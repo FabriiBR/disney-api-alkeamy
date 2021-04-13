@@ -20,4 +20,8 @@ class CharacterPolicy < ApplicationPolicy
   def destroy?
     user.present?
   end
+  
+  def search?
+    true
+  end
 end

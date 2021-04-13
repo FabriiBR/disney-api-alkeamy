@@ -20,4 +20,8 @@ class FilmPolicy < ApplicationPolicy
   def destroy?
     user.present?
   end
+
+  def search?
+    true
+  end
 end

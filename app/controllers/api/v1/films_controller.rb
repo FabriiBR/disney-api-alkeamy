@@ -1,5 +1,5 @@
 class Api::V1::FilmsController < Api::V1::BaseController
-    acts_as_token_authentication_handler_for User, except: [ :index, :show ]
+    acts_as_token_authentication_handler_for User, except: [ :index, :show, :search ]
     before_action :set_film, only: [ :show, :update, :destroy]
 
     def index
@@ -25,6 +25,11 @@ class Api::V1::FilmsController < Api::V1::BaseController
       else
         render_error
       end
+    end
+
+    def search
+      @films = Film.where(title: params[:query])
+      authorize @films
     end
 
     def destroy

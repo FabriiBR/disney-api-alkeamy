@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :characters, only: [ :index, :show, :update, :create, :destroy ]
-      resources :films, only: [ :index, :show, :update, :create, :destroy ]
+      resources :characters, only: [ :index, :show, :update, :create, :destroy ] do
+        get 'search/:query', to: 'characters#search', on: :collection
+      end
+      resources :films, only: [ :index, :show, :update, :create, :destroy ] do
+        get 'search/:query', to: 'films#search', on: :collection
+      end
     end
   end
   
